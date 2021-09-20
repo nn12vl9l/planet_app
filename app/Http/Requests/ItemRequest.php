@@ -27,7 +27,7 @@ class ItemRequest extends FormRequest
             'name' => 'required|string|max:50',
             'englishname' => 'required|string|max:50',
             'radius' => 'required|integer|min:1',
-            'weight' => 'required|bigInteger|min:1',
+            'weight' => 'required|integer|min:1',
         ];
     }
 }
