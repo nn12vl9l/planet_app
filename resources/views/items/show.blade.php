@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Planet-App</title>
+    <title>惑星情報</title>
 </head>
 <body>
     <h1>惑星情報</h1>
-    @if ($item !== null)
-    <div class="item-field">
-        <strong>名前 : {{ $item->name }}</strong>
-        <strong>名前(英語) : {{ $item->englishname }}</strong>
-        <strong>半径 : {{ $item->radius }}</strong>
-        <strong>重量 : {{ $item->weight }}</strong>
-    </div>
-
-    @else
-    <p>id = {{ $id }} の惑星情報は存在しません。</p>
-    @endif
+    <p>
+        <b>名前:{{ $item->name }})</b>
+    </p>
+    <p>
+        <b>名前(英語):{{ $item->englishname }})</b>
+    </p>
+    <p>
+        <b>半径:{{ $item->radius }})</b>
+    </p>
+    <p>
+        <b>重量:{{ $item->weight }})</b>
+    </p>
     <a href="/items">戻る</a>
+    
 </body>
 </html>

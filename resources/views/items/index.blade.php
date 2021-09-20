@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Planet_App</title>
+    <title>惑星管理アプリ</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
     <h1>惑星一覧</h1>
-    <table border="1">
+    <table>
         <tr>
             <th>名前</th>
             <th>名前(英語)</th>
             <th>半径</th>
             <th>重量</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
         </tr>
         @foreach ($items as $item)
             <tr>
@@ -32,7 +33,7 @@
                     <form action="/items/{{ $item->id }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="削除する" onclick="if(confirm('削除しますか？')){return false}">
+                        <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
                     </form>
                 </td>
             </tr>
